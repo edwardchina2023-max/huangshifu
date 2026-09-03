@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="eJBfzYufxhA4ZKbAtzjmMP">
+<head data-page-node-id="f0Rdju6gHHz6uLPnHfpDNk">
+<meta charset="UTF-8" data-page-node-id="YtG4nmn4plYq7ZxURe23Lr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="iuSt4vcK4dRRx3CMsoRjV4">
+<title>实验室日报工作流 · 人机协同内容流水线</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f4f5f7; color:#1d2129; line-height:1.75; padding:32px 16px; }
+  .page { max-width:880px; margin:0 auto; background:#fff; border-radius:14px; box-shadow:0 4px 24px rgba(0,0,0,.08); overflow:hidden; }
+  header { background:linear-gradient(135deg,#16213e 0%,#0f3460 60%,#533483 130%); color:#fff; padding:44px 44px 34px; }
+  header .kicker { font-size:13px; letter-spacing:4px; opacity:.75; margin-bottom:10px; }
+  header h1 { font-size:32px; margin-bottom:10px; }
+  header p { font-size:15px; opacity:.9; max-width:640px; }
+  .body { padding:36px 44px 48px; }
+  h2 { font-size:21px; margin:40px 0 16px; padding-left:12px; border-left:4px solid #0f3460; }
+  h2:first-child { margin-top:0; }
+  h3 { font-size:16px; margin:22px 0 10px; color:#0f3460; }
+  p, li { font-size:15px; color:#333; }
+  ul, ol { padding-left:22px; margin:8px 0; }
+  li { margin-bottom:6px; }
+  /* 时间轴 */
+  .timeline { position:relative; margin:20px 0 8px; padding-left:28px; }
+  .timeline::before { content:""; position:absolute; left:9px; top:8px; bottom:8px; width:2px; background:#d7dce5; }
+  .node { position:relative; margin-bottom:26px; }
+  .node::before { content:""; position:absolute; left:-25px; top:6px; width:12px; height:12px; border-radius:50%; background:#fff; border:3px solid #0f3460; }
+  .node.auto::before { border-color:#c0392b; }
+  .node .t { font-weight:700; font-size:16px; }
+  .node .t .badge { display:inline-block; font-size:12px; font-weight:600; padding:2px 10px; border-radius:99px; margin-left:8px; vertical-align:2px; }
+  .badge.machine { background:#fdecea; color:#c0392b; }
+  .badge.human { background:#e8f0fe; color:#0f3460; }
+  .node .role { font-size:13px; color:#86909c; margin:2px 0 8px; }
+  /* 卡片 */
+  .card { background:#f7f9fc; border:1px solid #e5eaf3; border-radius:10px; padding:16px 20px; margin:10px 0; }
+  .card.dark { background:#16213e; color:#e8ecf4; border-color:#16213e; }
+  .card.dark p, .card.dark li { color:#d5dbea; }
+  .cmd { font-family:"SF Mono",Menlo,monospace; background:#fff; border:1px dashed #0f3460; border-radius:8px; padding:12px 16px; font-size:14px; color:#0f3460; margin:8px 0; }
+  .cmd b { color:#c0392b; }
+  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:14px; }
+  th { background:#0f3460; color:#fff; padding:10px 12px; text-align:left; font-weight:600; }
+  td { padding:10px 12px; border-bottom:1px solid #e5e6eb; vertical-align:top; }
+  tr:nth-child(even) td { background:#f7f8fa; }
+  .rule { background:#fff8e6; border-left:4px solid #f0a020; padding:12px 16px; border-radius:0 8px 8px 0; margin:10px 0; font-size:14px; }
+  .gate { background:#eefaf1; border-left:4px solid #27ae60; padding:12px 16px; border-radius:0 8px 8px 0; margin:10px 0; font-size:14px; }
+  .filetree { font-family:"SF Mono",Menlo,monospace; font-size:13.5px; background:#f7f9fc; border:1px solid #e5eaf3; border-radius:8px; padding:16px 20px; white-space:pre; overflow-x:auto; line-height:1.8; }
+  footer { padding:20px 44px 32px; font-size:12px; color:#86909c; border-top:1px solid #f0f0f0; }
+  .print-btn { position:fixed; top:18px; right:18px; background:#0f3460; color:#fff; border:none; padding:10px 18px; border-radius:8px; font-size:14px; cursor:pointer; box-shadow:0 2px 10px rgba(0,0,0,.2); }
+  @media print { .print-btn{display:none} body{background:#fff;padding:0} .page{box-shadow:none;border-radius:0} }
+</style>
+</head>
+<body data-page-node-id="4HKBETnYAfyKA6tHy7E0F4">
+<button class="print-btn" onclick="window.print()" data-page-node-id="JMp9qWrwxsxqOkfsvVTm5g">🖨️ 打印此工作流</button>
+<div class="page" data-page-node-id="NQTIFQJyOznc30ifxv2OFv">
+<header data-page-node-id="x5c7X2DUCFnjPj26KHJy3E">
+  <div class="kicker" data-page-node-id="sAN0QHW8KS1ZNRSjUFTT7A">LAB DAILY PIPELINE</div>
+  <h1 data-page-node-id="EyZul5wjYBdfazv5E21jAJ">实验室日报工作流</h1>
+  <p data-page-node-id="IC4tENlUctUKinmkeeVEcy">「实验室雷达」人机协同内容流水线：机器负责巡视与初稿，黄师傅负责三次关键决策。每天一篇口播脚本 + 一篇公众号文章，母体是「实验室」这个母题，落点是「实验室前线 / 实验室手记 / 实验室内参」三条产品线。</p>
+</header>
+<div class="body" data-page-node-id="UwrlFROl2PT857tcMScBLx">
+
+<h2 data-page-node-id="N7YVK7D7gHEuJEQg0RoKKo">一、一天的四个节点</h2>
+<div class="timeline" data-page-node-id="wM2TtIGYayDNY6hg0FBw5y">
+  <div class="node auto" data-page-node-id="2akC2FskfvDVajDkO77X45">
+    <div class="t" data-page-node-id="UP95EHiw9eqpOds6NNbY4k">06:00 晨间巡视<span class="badge machine" data-page-node-id="fFbywJeBOQAHKJnbuKek0U">机器自动</span></div>
+    <div class="role" data-page-node-id="LsbaiidVWeojESjnl687Xt">执行：定时自动化「实验室雷达·每日晨间巡视」（已启用）｜黄师傅动作：无，睡醒即可</div>
+    <div class="card" data-page-node-id="GlHFF6GwDaujpOe5dCpxGz">
+      自动扫描五层信息源（顶级期刊 → 高校官网 → 科技媒体 → 科学家/投资人社媒 → 中文自媒体），只保留「能反推到具体实验室」的消息。<br data-page-node-id="E9G8f9QMFdfJFgvFId6OE5">
+      产出《实验室雷达早报》：今日雷达 5–8 条 + 3 个候选选题（含建议栏目、人文角度、工作量）+ 1 句主编推荐。<br data-page-node-id="yR9EXfxFQFE8YHU2WpcL1X">
+      存盘：<b data-page-node-id="bIBPxxEMNcXGG4tdfALX3T">实验室雷达/YYYY-MM-DD-早报.md</b>
+    </div>
+  </div>
+  <div class="node" data-page-node-id="upTnE95iRlZBcunZakgszo">
+    <div class="t" data-page-node-id="pMPA9kAKFc9yQCjeKmxSZf">08:00 第一次互动：定选题<span class="badge human" data-page-node-id="Zr5Oca7UQBuwr6G11o8A87">黄师傅决策 · 约 3 分钟</span></div>
+    <div class="role" data-page-node-id="CRrY1yweWlu7CZTJQcJTfw">输入：早报 3 个候选｜决策：选 1 个（或推翻另给方向）｜机器随后：系统收集资料 → 撰写提纲</div>
+    <div class="cmd" data-page-node-id="dqhzLWLJPd36wY99GbGwGc">口令 A（三选一）：<b data-page-node-id="QTFVwCQIPXTcXlGv70tqxG">「选题 2，开做」</b>　／　口令 B（自定方向）：<b data-page-node-id="BAMdfb7NC6VbsxqBM6d05w">「今天做 XX 实验室的 XX，开做」</b></div>
+    <div class="card" data-page-node-id="c7KA0YEngRBfpE7SAJyYMv">
+      你确认后，我立即执行：①围绕选题做深度资料收集（论文原文、实验室官网、PI 背景、相关历史脉络、产业转化情况）②撰写文章提纲（结构、小标题、核心故事线、预计字数）③同步列出口播脚本的分镜思路。<br data-page-node-id="evI6d8LsF3VPDlur2IZeBT">
+      产出存盘：<b data-page-node-id="2B5hwDUA4DZTMgzBMo9owk">实验室雷达/YYYY-MM-DD-提纲.md</b>，12 点前就绪等你确认。
+    </div>
+  </div>
+  <div class="node" data-page-node-id="GQsubKrKKqwRMLJbBV1Oid">
+    <div class="t" data-page-node-id="9rnwf81HeGwpz8Q6DgewkY">12:00 第二次互动：定核心思路<span class="badge human" data-page-node-id="hSXXj4unGAALCrsPTaPzB9">黄师傅决策 · 约 5 分钟</span></div>
+    <div class="role" data-page-node-id="uz7zidGwKqNLQqAEpDSpF8">输入：提纲 + 分镜思路｜决策：确认 / 调整核心思路｜机器随后：写口播脚本 + 写公号文章</div>
+    <div class="cmd" data-page-node-id="XvbMMgqtVieKfjByLtzKcJ">口令 C：<b data-page-node-id="POwlHgWQvcGLaosdJmMRCr">「提纲 OK，开写」</b>　／　口令 D：<b data-page-node-id="dpqK85UqZy4WdllTJKrOJ9">「第 3 部分换成 XX 角度，其他 OK，开写」</b></div>
+    <div class="card" data-page-node-id="YvcHu3cVMgTltqyq5xAiwp">
+      你确认后，我并行产出两件半成品：<br data-page-node-id="BVO1i6Q500ma4eQZ4GXqwS">
+      ①<b data-page-node-id="rdzFzKC6SuXBLNB0i8lruC">口播脚本</b>（四段式：开场提问 → 现场/影像 → 访谈/讲述 → 人文评论；标景别与时长，2–5 分钟体量）<br data-page-node-id="3QLwKq4fdSefxcIg0SYCQM">
+      ②<b data-page-node-id="YVpaV5FPzGDaUw6gPNg0Kl">公众号文章</b>（深度图文，2000–3500 字，手记口吻：多故事细节、少空话大道理）<br data-page-node-id="Lotn0RynNuEG84MhZIqpGD">
+      存盘：<b data-page-node-id="7ZrrSmF0neCaL4DsJs2oDU">实验室雷达/YYYY-MM-DD-口播脚本.md</b> 与 <b data-page-node-id="JKIHsZmMB31Ha9i4IYj5Oq">YYYY-MM-DD-公号文章.md</b>，18 点前就绪。
+    </div>
+  </div>
+  <div class="node" data-page-node-id="YmzqkPnl2gxFecgLGj9i6W">
+    <div class="t" data-page-node-id="v8PcY3FWeI0c9hMdjryEr7">18:00 第三次互动：定稿<span class="badge human" data-page-node-id="ngW1dh7mxKteHXDqIS42E5">黄师傅决策 · 约 5 分钟</span></div>
+    <div class="role" data-page-node-id="7syN75JOLFXeBqTBnU4SWa">输入：两件半成品｜决策：通过 / 改｜机器随后：终稿 + 配图建议 + 分发清单</div>
+    <div class="cmd" data-page-node-id="CQ7c5FQLjkfS47wCVqe4GP">口令 E：<b data-page-node-id="zRouSDBPyjOncsr0asgYfd">「定稿」</b>　／　口令 F：<b data-page-node-id="WXSwPDQQLv2bjBMPywyN7U">「口播第二段重写，文章结尾收一收，再给我看」</b></div>
+    <div class="card" data-page-node-id="Y5feehS89IzSNGz1QIJD2C">
+      定稿后我交付：①终稿文件 ②配图/封面建议（含外包设计师需求说明）③分发清单（公众号/视频号/小红书/抖音的标题与简介适配版本）④归档到素材库，供「实验室内参」周度汇编复用。
+    </div>
+  </div>
+</div>
+
+<h2 data-page-node-id="PFKt9BmUbC6keMErYDTn3j">二、信息源清单（6 点巡视固定扫描）</h2>
+<table data-page-node-id="Tsxgj6cx5KP0KlDkHKmGaz">
+  <tr data-page-node-id="Grmkv2bgXvrm6Eo9E1vjDB"><th data-page-node-id="5UqzpBPZb18FcN40OU5Nhl">层级</th><th data-page-node-id="Gw8zpKIki92euDjPVI2PXs">信息源</th><th data-page-node-id="z5xmOjvibk362JvF4VrL4z">扫描重点</th></tr>
+  <tr data-page-node-id="veiSZY27sMqVkd9YY3hGIN"><td data-page-node-id="Sd2vkYhWF7fHPuOdA4t7QU">顶级期刊</td><td data-page-node-id="mKCQb7VXYnCRNkntkRkcyR">Nature / Science / Cell 及子刊新闻页</td><td data-page-node-id="6SENBTvGY7gVgstXOw8UU4">重磅论文、官方新闻稿</td></tr>
+  <tr data-page-node-id="Gc0sOEUN6x3UrYGArqX385"><td data-page-node-id="FJzg7HmQh8USshy0uq63wk">高校与机构官网</td><td data-page-node-id="2KVZR7Sk7DY6otLNy5zs6K">MIT / Stanford / Harvard / Caltech；DeepMind / OpenAI / Anthropic 博客；清华 / 北大 / 中科院 / 之江实验室 / 北京·上海 AI 实验室</td><td data-page-node-id="QXgQGFl4lT77tZOwL6o0v8">实验室成果披露、PI 动态</td></tr>
+  <tr data-page-node-id="LGeifRJ4NBiC4YzYHGPMli"><td data-page-node-id="goDQAF0yz7rF8yfAFEOSvR">科技媒体</td><td data-page-node-id="pTYMm27g3fSElgr1M5aH4U">MIT Technology Review、量子位、机器之心、DeepTech深科技、36氪、极客公园、新智元</td><td data-page-node-id="LDAcFFrgslVjm1VfHwoQh0">24h 内的实验室报道</td></tr>
+  <tr data-page-node-id="HlScxq1UTdXt8YaYCkMtXl"><td data-page-node-id="XSc8t2327J9PWNPtw4Jnff">人物社媒</td><td data-page-node-id="ZSrA5rskprDzC33lKfiJTQ">全球科学家、科技企业家、创业者、头部投资人公开发言</td><td data-page-node-id="qlUaN9S5Recdz8fEFzZerU">24–48h 重要表态与争论</td></tr>
+  <tr data-page-node-id="E1zPyxHIcHwgzbmrC7pEpX"><td data-page-node-id="FV6KjwnFySNnOARPMGmTPi">中文自媒体</td><td data-page-node-id="lWzWlmHsaRy5z0qi46j9QM">科技、商业资讯类账号</td><td data-page-node-id="XPbrV6ComaqIlbl5EPmZpC">被多家转载的热点，验证国内传播度</td></tr>
+</table>
+<div class="rule" data-page-node-id="bANaX8sQ9B4zyuagap1iXe"><b data-page-node-id="LaQxaWI0DFE3HkaxEOjWf2">入选铁律：</b>每条消息必须能落到一个<b data-page-node-id="MvQQeduezvXa3XQwIguN4f">具体的实验室 / 研究团队 / PI</b>。落不到实验室的纯产品、融资、政策新闻一律不进早报——这条流水线只生产「实验室」母题的选题。</div>
+
+<h2 data-page-node-id="NfoaIvPNaFSrjNKZYyznY9">三、文件结构（流水线沉淀即素材库）</h2>
+<div class="filetree" data-page-node-id="04x3seUFZNMFgOu7a0fi3X">实验室雷达/
+├── YYYY-MM-DD-早报.md        ← 6:00 机器产出
+├── YYYY-MM-DD-提纲.md        ← 8:00 你确认后产出
+├── YYYY-MM-DD-口播脚本.md     ← 12:00 你确认后产出
+├── YYYY-MM-DD-公号文章.md     ← 12:00 你确认后产出
+├── YYYY-MM-DD-终稿/          ← 18:00 定稿归档（含分发版本）
+└── 选题池.md                  ← 未被选中的好选题滚动留存</div>
+<p data-page-node-id="Y1rz1VUn6Ee0BuTbJ1dQ6y">每天攒下的早报与终稿，就是「实验室内参」周报的原料、B2B 提案的案例库——流水线本身就是资产。</p>
+
+<h2 data-page-node-id="DCkgrUGnJOnsxdSIpBdsGL">四、质量闸门（每道都得过）</h2>
+<div class="gate" data-page-node-id="WXaGCgHzjBwMjNKLIraTDJ"><b data-page-node-id="NfH7T9HTpM20b5uQTZ8x2U">事实闸：</b>所有成果表述必须有信息源支撑，链接随文留存；拿不准的一律标注「待核实」，不硬写。</div>
+<div class="gate" data-page-node-id="cI6CFxkRDDGxXGQrvbMx2o"><b data-page-node-id="KQj6zzGwvRNxzLMzq6IA7M">口吻闸：</b>多故事、细节、亲身经历，少空话大道理；可引文化名人典故但必须具体；全文零「从来 / 从来不是 / 从来不」类表述；不引用《顺》书内容。</div>
+<div class="gate" data-page-node-id="X2eeyc1DSFerMy8sXgmz1a"><b data-page-node-id="m1TQdL0u1UrCA4cZsGvzrb">母体闸：</b>每篇必须回扣「实验室」母题——现场、人物、成果、转化，至少占其一。</div>
+<div class="gate" data-page-node-id="Iqj2sLHQfYEofR7FdOUIv9"><b data-page-node-id="oDM7n9yklYO57YFog8NUFk">定稿闸：</b>AI 起草，黄师傅定稿。任何一篇未经你 18:00 确认的内容，不进入发布流程。</div>
+
+<h2 data-page-node-id="g4Mh3AQnNTjy5OXgGgKvHz">五、节奏兜底与周复盘</h2>
+<ul data-page-node-id="HABJnxiLFJOkobm8FP14S7">
+  <li data-page-node-id="6gscY07zjFiZoe8Q2lDpe3"><b data-page-node-id="DkRplyANDKo3AGbxUSngdC">你某天没空互动：</b>流水线自动降级为「只出早报 + 存选题池」，不硬产半成品，避免垃圾积压。</li>
+  <li data-page-node-id="cQUVGXKTLRXFJItFCoCoaj"><b data-page-node-id="HAEiCtPHxU2CV6bsQNcDaW">选题池机制：</b>每天 3 个候选里没被选中的，自动滚入「选题池.md」，周日统一过一遍，好选题不浪费。</li>
+  <li data-page-node-id="d7s9GNPH1gG6VEXH59vgSN"><b data-page-node-id="6Ntd4skF6D9toRWklvyNJV">周日复盘（建议每周日 20:00，10 分钟）：</b>看本周 7 份早报 + 产出成稿数，对我说一句<b data-page-node-id="tlGO5pJfX8HEnBnvNAZiHV">「本周复盘」</b>，我出周报：选题命中率、成稿率、哪类实验室题材反馈好、下周栏目侧重建议。</li>
+  <li data-page-node-id="BzJU1AaZXDs75j6NJOpSaY"><b data-page-node-id="YKnFB9upNPI0uE9AmbWFhb">与整体节奏的衔接：</b>「前线」走短视频平台（图灵的金枪鱼账号试验），「手记」走公众号主品牌，「内参」按月汇编服务 B2B（红波线 / 动量 / 原科瑞控）。</li>
+</ul>
+
+</div>
+<footer data-page-node-id="fCYnFfSU4FC2pPWpeEbB7g">实验室日报工作流 v1.0 ｜ 2026-08-31 ｜ 自动化「实验室雷达·每日晨间巡视」已启用，明早 6:00 首跑 ｜ 口令卡建议打印贴桌前</footer>
+</div>
+</body>
+</html>

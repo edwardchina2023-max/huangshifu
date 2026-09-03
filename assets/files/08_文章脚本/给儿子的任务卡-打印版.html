@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>机器人世界礼貌与好奇清单</title>
+<style>
+  :root{--ink:#111;--ink2:#333;--line:#ccc;--accent:#1a1a1a;--teal:#0f7b8a;--orange:#c06a1d;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:#f5f5f5;line-height:1.75;font-size:16px;}
+  .page{max-width:760px;margin:0 auto;padding:24px 18px 60px;background:#fff;}
+  .toolbar{max-width:760px;margin:0 auto;padding:10px 0;text-align:right;}
+  .toolbar button{background:#1e4fd8;color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:15px;cursor:pointer;}
+  header.hero{border-bottom:3px solid var(--ink);padding-bottom:16px;margin-bottom:18px;}
+  header.hero h1{font-size:25px;letter-spacing:1px;margin-bottom:6px;}
+  header.hero .sub{font-size:14px;color:var(--ink2);}
+  .note{background:#f2f2f2;border-left:4px solid var(--ink);padding:12px 16px;border-radius:0 8px 8px 0;margin:16px 0;font-size:15px;}
+  h2{font-size:19px;margin:26px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--ink);}
+  h3{font-size:16px;margin:16px 0 6px;}
+  .grid{border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:8px 0;background:#fafafa;}
+  .grid .tag{font-size:12.5px;color:#666;margin-bottom:4px;}
+  .grid .txt{font-size:16px;}
+  .grid.say .tag{color:var(--teal);font-weight:600;}
+  .grid.ask .tag{color:var(--orange);font-weight:600;}
+  .aside{font-size:13px;color:#888;font-style:italic;margin:2px 0 10px 2px;}
+  ol,ul{margin:8px 0 12px 22px;}
+  li{margin-bottom:8px;}
+  .step{font-weight:700;}
+  .tipbox{border:1.5px dashed #999;border-radius:10px;padding:14px 16px;margin:12px 0;}
+  footer{text-align:center;color:#999;font-size:12.5px;margin-top:28px;}
+  @media print{
+    body{background:#fff;}
+    .toolbar{display:none;}
+    .page{max-width:none;padding:0;}
+    header.hero,.grid,.tipbox,.note{page-break-inside:avoid;}
+    h2{page-break-after:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar"><button onclick="window.print()">🖨️ 打印这份清单</button></div>
+
+<div class="page">
+
+<header class="hero">
+  <h1>机器人世界礼貌与好奇清单</h1>
+  <div class="sub">给一位 12 岁人类的一小袋「提示词」 · 2026 世界机器人大会</div>
+</header>
+
+<div class="note">
+  听说机器人都要靠「提示词」才知道该干什么。<b>巧了，你也是。</b>下面这些提示词，能帮你打开机器人世界的大门——对着机器人说、对着机器人旁边的人说、或者只是小声对自己嘀咕，都行。<br><br>放心用。这里没有标准答案，只有你的好奇心算数。
+</div>
+
+<h2>第一格 · 礼貌提示词（跟陌生人搭话用）</h2>
+<p>进机器人世界先学「打招呼」——这玩意儿比任何大模型都好使。</p>
+<div class="tipbox">
+  <p><span class="step">万能开场:</span> "叔叔/阿姨你好，我叫 ___，能问你一个小问题吗？"<br><span style="font-size:13px;color:#888;">（记得先笑一下。微笑是免费的，而且比提示词管用。）</span></p>
+  <p style="margin-top:8px;"><span class="step">一条一条来:</span> 像喂机器人指令一样，一次只给一条，越简单越好。</p>
+  <p style="margin-top:8px;"><span class="step">收尾:</span> "谢谢！祝你玩得开心！"（这句话会让人愿意回答你下一个问题。）</p>
+</div>
+<p><span class="step">三个系统提示（背不下来也没关系）:</span></p>
+<ul>
+  <li><b>被拒绝 = 正常现象。</b>连最聪明的机器人都会「幻觉」，你只是碰上一个今天不太想聊天的人类。换一个。</li>
+  <li><b>说错话 = 没关系。</b>你不是在考试，你是在探险。</li>
+  <li><b>卡住了 = 就笑一下，说「我想想」。</b>没人会笑话一个认真好奇的小孩。</li>
+</ul>
+
+<h2>第二格 · 好奇提示词（打开话匣子的口令）</h2>
+<p>这些是用来问「机器人旁边的活人」的。答案通常比展牌上的字有意思多了。</p>
+
+<div class="grid ask"><div class="tag">刚进门，随便抓一个人</div><div class="txt">"你第一次看到这么多机器人，是什么感觉？"</div></div>
+
+<div class="grid ask"><div class="tag">在煎饼机器人前面</div><div class="txt">"如果机器人能给你做早饭，你愿意吃吗？你以后还会自己做吗？"</div></div>
+<div class="grid ask"><div class="tag">问做煎饼的那位</div><div class="txt">"它做的和人工做的，味道一样吗？差了点什么？"</div></div>
+
+<div class="grid ask"><div class="tag">在格斗台前面</div><div class="txt">"你觉得机器人打架好看，还是人打架好看？"</div></div>
+<div class="grid ask"><div class="tag">问格斗台的工作人员</div><div class="txt">"它要是摔倒了，会'受伤'吗？疼不疼？"</div></div>
+
+<div class="grid ask"><div class="tag">在握手机器人旁边</div><div class="txt">"如果以后有个机器人朋友，你会跟它说心里话吗？"</div></div>
+<div class="grid ask"><div class="tag">问介绍机器人的人</div><div class="txt">"它是真的感觉到我，还是装出来的？"</div></div>
+
+<div class="grid ask"><div class="tag">遇到同龄小选手</div><div class="txt">"你多大啦？做这个难吗？你以后想做什么？"</div></div>
+<div class="grid ask"><div class="tag">问介绍的人（关于上学）</div><div class="txt">"以后我们还要不要背课文、考那么多试？机器人会帮我们学吗？"</div></div>
+
+<div class="grid ask"><div class="tag">在机器人装机器人的地方</div><div class="txt">"这个活以后还需要人吗？我长大想做的事，还有位置吗？"</div></div>
+<div class="aside">* 最后这个问题有点扎心，问之前可以先深呼吸一下。</div>
+
+<h2>第三格 · 自言自语提示词（你的内心弹幕）</h2>
+<p>有些话不用问别人，说给自己听就行。这些是「弹幕」，边走边冒出来那种——<b>不用背，想到哪句说哪句</b>，说成你自己的话更好。</p>
+
+<div class="grid say"><div class="tag">刚到门口</div><div class="txt">"大家好，我叫 ___，今年十二岁，马上要上初一了。我家里有一台 3D 打印机，平时喜欢自己打印小东西。今天我就想搞明白一件事——如果机器什么都能自己做，那我还要不要动手做东西？"</div></div>
+
+<div class="grid say"><div class="tag">看到机器做饭</div><div class="txt">"它摊煎饼只要三分钟，我在家打下手要忙活半天。以后是不是就不用学做饭了？"</div></div>
+
+<div class="grid say"><div class="tag">看机器人打架</div><div class="txt">"它们打得又快又猛，还能打乒乓球。可是……它们会不会疼？"</div></div>
+
+<div class="grid say"><div class="tag">机器人跟我握手</div><div class="txt">"它居然认出我衣服的颜色，还跟我握手。它是不是真的知道我开不开心？"</div></div>
+
+<div class="grid say"><div class="tag">看到同龄人在比赛</div><div class="txt">"这里好多和我差不多大的人，都在自己做机器人。原来'造东西'不是只有打印玩具。"</div></div>
+
+<div class="grid say"><div class="tag">看到机器人装机器人</div><div class="txt">"机器人会自己装机器人，那我长大以后，还有没有我想干的活？"</div></div>
+
+<div class="grid say"><div class="tag">逛完一天</div><div class="txt">"我本来以为机器这么厉害，我学的 3D 打印就没用了。但现在我觉得——它厉害是它厉害，可我自己动手做出来的东西，那种开心它给不了。"</div></div>
+
+<div class="grid say"><div class="tag">转头问爸爸</div><div class="txt">"爸，十年以后，我还能像现在这样自己打印东西吗？"</div></div>
+
+<h3>路过时的小弹幕（从一个地方走到另一个地方时说）</h3>
+<div class="grid say"><div class="tag">出门前</div><div class="txt">"今天我要去一个全是机器人的地方。"</div></div>
+<div class="grid say"><div class="tag">去看做饭</div><div class="txt">"接下来，我去看看机器怎么做饭。"</div></div>
+<div class="grid say"><div class="tag">去看打架</div><div class="txt">"听说有机器人在打架，我得去看看。"</div></div>
+<div class="grid say"><div class="tag">去看握手机器人</div><div class="txt">"那边有个机器人，会跟你握手。"</div></div>
+<div class="grid say"><div class="tag">去看比赛</div><div class="txt">"我想看看，和我差不多大的孩子，都在做些什么。"</div></div>
+<div class="grid say"><div class="tag">去看机器人装机器人</div><div class="txt">"有人说，机器人能自己造机器人。"</div></div>
+<div class="grid say"><div class="tag">逛完了</div><div class="txt">"逛了一天，我好像有点答案了。"</div></div>
+
+<footer>最后一条提示：别把这些全说完，留点力气吃棉花糖机器人做的棉花糖。 · 打印日期 2026-08-20</footer>
+
+</div>
+</body>
+</html>

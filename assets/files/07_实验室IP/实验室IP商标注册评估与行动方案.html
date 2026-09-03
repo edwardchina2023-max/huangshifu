@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="tqKXBj6B7onsp18RtQ0VAy">
+<head data-page-node-id="DskD9mH5wd8B671ffW7W0a">
+<meta charset="UTF-8" data-page-node-id="zYHDinJMz6OCamJk7Rz4hx">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="4xhbzDcy6jhfaJnHH72ly5">
+<title>实验室 IP 商标注册评估与行动方案</title>
+<style>
+:root{
+  --ink:#1a1a1a; --ink2:#3f4650; --ink3:#6b7280;
+  --line:#e3e6ea; --bg:#ffffff; --bg2:#f7f8fa; --bg3:#eef1f5;
+  --red:#c0392b; --amber:#b7791f; --green:#1e7e5a; --blue:#1f5f9e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--bg2); color:var(--ink); line-height:1.75; font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:920px;margin:0 auto;background:var(--bg);padding:0 0 60px;box-shadow:0 0 40px rgba(0,0,0,.05)}
+
+/* header */
+header{background:linear-gradient(135deg,#1e3a5f 0%,#2d5a8c 100%);color:#fff;padding:44px 40px 38px}
+header .kicker{font-size:12px;letter-spacing:3px;opacity:.75;margin-bottom:12px}
+header h1{font-size:30px;font-weight:700;letter-spacing:-.5px;line-height:1.35}
+header .sub{margin-top:14px;font-size:14px;opacity:.85;line-height:1.7}
+header .meta{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.2);font-size:12.5px;opacity:.75;display:flex;flex-wrap:wrap;gap:18px}
+
+section{padding:38px 40px 0}
+h2{font-size:20px;font-weight:700;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:10px}
+h2 .n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--ink);color:#fff;border-radius:6px;font-size:13px;font-weight:700;flex-shrink:0}
+h2 + .lead{color:var(--ink3);font-size:13.5px;margin-bottom:20px;padding-left:36px}
+h3{font-size:16px;font-weight:700;margin:24px 0 12px;color:var(--ink)}
+p{margin-bottom:12px;color:var(--ink2)}
+
+/* verdict box */
+.verdict{background:#fff8f0;border:1px solid #f0d8b0;border-left:4px solid var(--amber);padding:20px 22px;border-radius:8px;margin:18px 0}
+.verdict .t{font-weight:700;color:#8a5a12;margin-bottom:8px;font-size:15px}
+.verdict p{color:#6b4c17;margin-bottom:6px;font-size:14.5px}
+.verdict p:last-child{margin-bottom:0}
+
+/* score cards */
+.cards{display:flex;flex-direction:column;gap:18px;margin-top:8px}
+.card{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.card .hd{padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.card .hd .name{font-size:18px;font-weight:700}
+.card .hd .name small{display:block;font-size:12px;font-weight:400;color:var(--ink3);margin-top:3px}
+.card .score{text-align:right;flex-shrink:0}
+.card .score .pct{font-size:26px;font-weight:800;line-height:1}
+.card .score .lbl{font-size:11px;color:var(--ink3);letter-spacing:1px;margin-top:3px}
+.card .bd{padding:0 20px 18px}
+.c-r{background:#fdf3f2;border-bottom:1px solid #f2d9d5} .c-r .hd .name,.c-r .score .pct{color:var(--red)}
+.c-a{background:#fdf9ef;border-bottom:1px solid #f0e3c2} .c-a .hd .name,.c-a .score .pct{color:var(--amber)}
+.c-g{background:#f1f8f4;border-bottom:1px solid #cfe7dc} .c-g .hd .name,.c-g .score .pct{color:var(--green)}
+.c-b{background:#f2f6fa;border-bottom:1px solid #d5e2ef} .c-b .hd .name,.c-b .score .pct{color:var(--blue)}
+
+.kv{display:grid;grid-template-columns:78px 1fr;gap:8px 12px;font-size:14px;margin-top:4px}
+.kv dt{color:var(--ink3);font-size:13px;font-weight:600}
+.kv dd{color:var(--ink2)}
+.tag{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11.5px;font-weight:600;margin:2px 4px 2px 0}
+.tag-bad{background:#fbe9e7;color:var(--red)}
+.tag-warn{background:#fdf3dc;color:var(--amber)}
+.tag-ok{background:#e6f4ed;color:var(--green)}
+.tag-info{background:#e8f0f8;color:var(--blue)}
+
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+th{background:var(--bg3);text-align:left;padding:10px 12px;font-weight:700;font-size:12.5px;color:var(--ink2);border-bottom:2px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink2)}
+tr:last-child td{border-bottom:none}
+td strong{color:var(--ink)}
+.num{text-align:center;font-weight:700;white-space:nowrap}
+.ok{color:var(--green);font-weight:700}
+.no{color:var(--red);font-weight:700}
+.mid{color:var(--amber);font-weight:700}
+
+.case{background:var(--bg2);border-left:3px solid var(--ink3);padding:12px 16px;margin:10px 0;font-size:13.5px;border-radius:0 6px 6px 0}
+.case .cn{font-weight:700;color:var(--ink);margin-bottom:4px}
+.case .cq{color:var(--ink2);font-style:normal}
+.case .cr{margin-top:6px;font-size:12.5px;color:var(--ink3)}
+.case.bad{border-left-color:var(--red);background:#fdf6f5}
+.case.good{border-left-color:var(--green);background:#f4faf7}
+
+ol,ul{margin:10px 0 14px 22px;color:var(--ink2)}
+li{margin-bottom:7px}
+ol li::marker{font-weight:700;color:var(--ink3)}
+
+.act{background:var(--bg2);border-radius:8px;padding:18px 20px;margin:14px 0}
+.act .h{font-weight:700;font-size:14.5px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.act .h .ph{background:var(--ink);color:#fff;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:700}
+
+.timeline{border-left:2px solid var(--line);margin-left:8px;padding-left:22px}
+.tl-item{position:relative;margin-bottom:22px}
+.tl-item::before{content:'';position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--ink);border:2px solid #fff;box-shadow:0 0 0 2px var(--line)}
+.tl-item .when{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:.5px;margin-bottom:3px}
+.tl-item .what{font-weight:700;font-size:15px;margin-bottom:5px}
+.tl-item .desc{font-size:13.5px;color:var(--ink2)}
+
+.callout{border:1px solid var(--line);border-radius:8px;background:#fff;padding:16px 18px;margin:16px 0}
+.callout .ch{font-weight:700;margin-bottom:8px;font-size:14.5px}
+.callout.warn{border-color:#e8c9a0;background:#fffcf5}
+.callout.warn .ch{color:#8a5a12}
+.callout.info{border-color:#c5d9ec;background:#f7fbff}
+.callout.info .ch{color:var(--blue)}
+
+footer{margin-top:40px;padding:24px 40px;border-top:1px solid var(--line);color:var(--ink3);font-size:12.5px;line-height:1.8}
+
+@media(max-width:640px){
+  header{padding:32px 22px 28px} header h1{font-size:23px}
+  section{padding:30px 22px 0}
+  footer{padding:20px 22px}
+  .kv{grid-template-columns:1fr;gap:2px 0}
+  .kv dd{margin-bottom:8px}
+  table{font-size:12.5px} th,td{padding:8px 7px}
+  .card .hd{flex-direction:column;align-items:flex-start}
+  .card .score{text-align:left}
+}
+@media print{
+  body{background:#fff} .wrap{box-shadow:none;max-width:100%}
+  section{page-break-inside:avoid}
+}
+</style>
+</head>
+<body data-page-node-id="Ar984ue2ELvOD93HCxpYpe">
+<div class="wrap" data-page-node-id="AaQGu4rErG8EjJ7mATGNjI">
+
+<header data-page-node-id="iQfWEGTgPDEL61waOyMBPH">
+  <div class="kicker" data-page-node-id="ZN657AEc3E7ZW6XsCh2x2K">黄师傅 · 实验室 IP · 知识产权</div>
+  <h1 data-page-node-id="Naed4KLREqy1XtmuDArBTN">商标注册成功率评估<br data-page-node-id="nFvvo2lGKWyzsHh2VOYAmK">与注册动作规划</h1>
+  <div class="sub" data-page-node-id="1bdpRzjLqUjHQfF8ZVJIFB">评估对象：非常实验室 / 实验室前线 / 实验室内参<br data-page-node-id="RhUpkcFYURLIiT4HjjReqr">依据：商标审查驳回先例、在先商标检索线索、2026 年新修订商标法</div>
+  <div class="meta" data-page-node-id="sjIlxCjxvnXgjtajcWMEwW">
+    <span data-page-node-id="FiyvLBXDFdzdtBLnUZxAbn">2026 年 8 月 31 日</span>
+    <span data-page-node-id="m3EKLTIquSwu4zKdPbC5iZ">适用法：现行商标法（2019 修正）</span>
+    <span data-page-node-id="f5aDfPQYaCH32NJqfwW8Ek">新法施行：2027 年 1 月 1 日</span>
+  </div>
+</header>
+
+<section data-page-node-id="CStvcCfcJiEQuRF6Tf86qH">
+  <h2 data-page-node-id="Kywys0sFLur0AXJ40wl9qd"><span class="n" data-page-node-id="zGSjOHUcPQ6DcndjJYp3oi">1</span>核心结论</h2>
+  <div class="lead" data-page-node-id="Des0l3dCgEANMkVbzzKBuT">先说最要紧的一句：问题不出在你起的名字不够好，而出在「实验室」这三个字本身。</div>
+
+  <div class="verdict" data-page-node-id="5Uh7b4oFEkKcI8FwAF2zDT">
+    <div class="t" data-page-node-id="l313CnbhDfnyBJBpOHtEsm">一句话判断</div>
+    <p data-page-node-id="qO3CHemppMGZVUaoJ4Ieg0">三个名字共用「实验室」，而这个词在你的核心类别（第 41 类教育娱乐、第 42 类科研服务）上，已被商标局多次以「<strong data-page-node-id="XYExXvXNUR34NsAS8PKevL">直接表示服务的内容和场所，缺乏显著性</strong>」为由驳回。这不是个别审查员的尺度问题，是稳定的审查口径。</p>
+    <p data-page-node-id="QcFDJKPKOCCdgY8PVsBiW3">所以：<strong data-page-node-id="1ZUGUnjbybLDrjoJVduNBm">三个名字都不能按现在的样子直接提交</strong>，但都还有路可走——靠三个技术手段（放弃专用权、图形化组合、使用证据）可以显著拉高成功率。其中「实验室内参」建议直接改名，不值得救。</p>
+  </div>
+
+  <h3 data-page-node-id="89rAF1J6EOehji6z8WQd8G">三个名字，三档判断</h3>
+  <table data-page-node-id="BWD6ZBPvWVAtx2EFvr5sIg">
+    <thead data-page-node-id="hXy3bHA4e0hXHgLOeFJ6TH"><tr data-page-node-id="7JiuC19y7ULA6Mudw2nuLZ"><th style="width:26%" data-page-node-id="9bqKdUddv3R7nkmnrfxbbH">名称</th><th class="num" style="width:12%" data-page-node-id="qdaft8ZYqK01o0vBIvRZdi">成功率</th><th style="width:14%" data-page-node-id="2PpJC1KAKSqRqnhYSvHDKb">结论</th><th data-page-node-id="qTYEeW58y7NPlReCZiX665">最关键的原因</th></tr></thead>
+    <tbody data-page-node-id="mYhtHEot0KZhvkRmB3iLnu">
+      <tr data-page-node-id="LtevgCOA266bghYNVQukN2"><td data-page-node-id="PvYLoWNvaKmgONsFXQr2YP"><strong data-page-node-id="bNeyLXFB0BBIzQwDmcMbzx">实验室内参</strong></td><td class="num" data-page-node-id="4ki2QpGcc4ovlooj5LuUis"><span class="no" data-page-node-id="E3iVd0ucCwDuSRE65Y5WbZ">15%</span></td><td data-page-node-id="wEpbXUEaeXLC3f3XObOgml"><span class="tag tag-bad" data-page-node-id="Pys1BlWyg7WhPgNfWCjKF6">建议弃用改名</span></td><td data-page-node-id="HiVqy5R7vJdFvN87UGidxE">「内参」有政治含义风险 + 在先商标群密集 + 出版服务上属描述性</td></tr>
+      <tr data-page-node-id="nTEFWFNTxgZJ2DJfI3X06W"><td data-page-node-id="EMs2A74eCevP5QdVLujB4A"><strong data-page-node-id="ihMnE1XO8ix7QDPeawPZGA">实验室前线</strong></td><td class="num" data-page-node-id="cwd9q3RWQWCB9cfL1LqYEy"><span class="mid" data-page-node-id="Eiczr0DhDqndB69shCzOsu">35%</span></td><td data-page-node-id="ACD2fh2543nTzHeETYCYAu"><span class="tag tag-warn" data-page-node-id="RFIhky9UXHVRXJZEE2kYtJ">可注，需技术手段</span></td><td data-page-node-id="xob8YJIlyIcS6bBBkNRPhG">「实验室」在 41 类有明确驳回先例，需靠放弃专用权 + 图形组合破解</td></tr>
+      <tr data-page-node-id="D8JpyDkmR5GoYeO4nBGAAc"><td data-page-node-id="JRqabYKHArLiEl7P4Azn5N"><strong data-page-node-id="JPzkOEuCScdyEpIABCzLJD">非常实验室</strong></td><td class="num" data-page-node-id="G0JXCsKReCMBv8LRQz1Tby"><span class="mid" data-page-node-id="19NmTuYhu1NfFrdD3KnFIc">45%</span></td><td data-page-node-id="VqLqqMGRZKFy93CxHp0zSm"><span class="tag tag-warn" data-page-node-id="LQfFrxYiYlHwZr9vAqjLWm">商标可行，品牌否决</span></td><td data-page-node-id="ucfCadS5BAkVCWNN4QlMA8">三个里最好过审；但撞已作废的「非常深科技」旧包袱，不建议使用</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;color:var(--ink3);margin-top:-4px" data-page-node-id="NiO1hdiUYQV8WaFgqUo9fc">成功率是<strong data-page-node-id="3V37zFKhu1Lf6PWRcESYII">纯文字商标、41 类、无使用证据、无图形设计</strong>前提下的估算。加上第 4 节的三个手段，实际可提升 20–35 个百分点。</p>
+</section>
+
+<section data-page-node-id="2GDM5rcnTCVJ4HA9iQVath">
+  <h2 data-page-node-id="ymD06lEV42hhOu7HHkNFZV"><span class="n" data-page-node-id="EcQIREfjoRHCaIHuilgwOB">2</span>判例依据：为什么「实验室」是雷区</h2>
+  <div class="lead" data-page-node-id="aj6fGnJl575y3dlQyFwzBk">这五份真实的驳回/注册记录，决定了你后面所有动作。</div>
+
+  <h3 data-page-node-id="ajpTiKKQWoVwZ9l9uxdvNY">被驳回的（4 件）</h3>
+  <div class="case bad" data-page-node-id="MzauEme4JuDecq3eoalZo4">
+    <div class="cn" data-page-node-id="o8SWW0J5NFaGhGblmhRW5u">「[AR]T LAB」· 第 41 类 · 驳回复审维持驳回</div>
+    <div class="cq" data-page-node-id="VqGfGu0PUGn85QK1VJ7Ipz">「申请商标主要识别英文 ART LAB，可翻译为『艺术实验室』，指定使用在培训、导游服务等全部服务上，<strong data-page-node-id="YfBdFlJqeCySr0CEEF1dPQ">直接表示了服务的内容、场所等特点</strong>，不具区分服务来源的作用。」</div>
+    <div class="cr" data-page-node-id="wpHukeq6zEpayt5erDwNNn">依据：商标法第十一条第一款第（二）项</div>
+  </div>
+  <div class="case bad" data-page-node-id="mVweBALLiUzeEFbC3OOGbC">
+    <div class="cn" data-page-node-id="gUAKJd0x6DGWg4CMCOAlgT">「MYLAB+」· 第 37/41/42/44 类 · 四类全部驳回</div>
+    <div class="cq" data-page-node-id="ZBHMjbfhc4tzUiGFTqWjd6">「申请商标可译为『我的实验室』，用作商标使用在所报服务项目上，<strong data-page-node-id="3rPSTTM3goXZboyvQqxXoH">缺乏显著特征，不具备商标的识别作用</strong>。」</div>
+    <div class="cr" data-page-node-id="GGDjg5YvDIc3VBsW78AuKP">依据：第十一条第一款第（三）项 —— 注意 41、42 类都在内，正是你要注册的类别</div>
+  </div>
+  <div class="case bad" data-page-node-id="g4bjKJOdNYiuPz7UiQAZAV">
+    <div class="cn" data-page-node-id="3hiqPGHAM5c7gmZ7j4cvsw">「甘蔗实验室」· 驳回</div>
+    <div class="cq" data-page-node-id="vKdlV0eeXDFKPcBUZlGlSE">「该标志的主要识别部分为『甘蔗实验室』，<strong data-page-node-id="V87FAboFEGSJRm0fd4y0BI">属于常用实验场所，不具备商标应有的识别作用</strong>，缺乏商标的显著特征。」</div>
+    <div class="cr" data-page-node-id="69kqpanf6Qn9czzbOhsrIQ">审查口径很直白：带「实验室」的，容易被直接认定成场所名称</div>
+  </div>
+  <div class="case bad" data-page-node-id="isFhCe0odpR8DrVRLF35NQ">
+    <div class="cn" data-page-node-id="3oRbVgeuAkxU9mpa1J7X3B">「VR 科学实验室」· 第 41 类 · 已驳回</div>
+    <div class="cq" data-page-node-id="HPAv92U4ORDE830MBr61fA">指定服务含「实验室研究用科学仪器和装置的操作培训」，2020 年 9 月驳回通知发文，11 月进入驳回复审。</div>
+    <div class="cr" data-page-node-id="EpPFaUiIQKxocO3I6SEiBZ">41 类 4101 组里有一条服务就叫「实验室研究用科学仪器和装置的操作培训」——你的商标撞在服务名称上</div>
+  </div>
+
+  <h3 data-page-node-id="dxsC96YtpqO4Tay36SWDIL">成功注册的（5 件）</h3>
+  <div class="case good" data-page-node-id="ZRaOFMYIsfmFnkxwBK2CEV">
+    <div class="cn" data-page-node-id="JVZyjlXJGuOiF4fqgIHUZT">黄鹤实验室 / 安安实验室 / GGU实验室 / WNU实验室 / 慢跑实验室</div>
+    <div class="cq" data-page-node-id="b37eYCnREYSPV650WZxt0r">其中「慢跑实验室」（北京慢跑科技，第 19241791 号）在<strong data-page-node-id="vRkB6F83uEWesoCXEyQOx3">第 42 类已获准注册</strong>，专用权期限 2017–2027。</div>
+    <div class="cr" data-page-node-id="C9FAjJicosgldP4FBpUHAV">存活下来的共同点：前面那两个字是<strong data-page-node-id="fqXJwxMkAoufyA2jpJh1yu">臆造词或专有名词</strong>（黄鹤、安安、GGU、慢跑），而不是描述性词汇</div>
+  </div>
+
+  <div class="callout info" data-page-node-id="LK5lP2mPi5FmKNZjHOWMNG">
+    <div class="ch" data-page-node-id="APYdaoxfRxJ7PnIbH9tMZC">分水岭就在这里</div>
+    <p style="margin-bottom:6px" data-page-node-id="1qqFfUbYHRQCj7BjiO7Rmi"><strong data-page-node-id="ZoGq1M9idR7D9imD4usINj">死的</strong>：艺术实验室、我的实验室、甘蔗实验室、VR科学实验室 → 前缀是描述性/通用词（艺术、我的、甘蔗、科学）</p>
+    <p style="margin-bottom:0" data-page-node-id="4sAtAkqThi4sZ1KEzpRNw8"><strong data-page-node-id="RMD4qpf7TRv8dBV0uaWFBO">活的</strong>：黄鹤实验室、安安实验室、GGU实验室、慢跑实验室 → 前缀是臆造/专名词，整体产生了新的含义</p>
+  </div>
+</section>
+
+<section data-page-node-id="ceIp6pAuK580UKwJ2bpPRy">
+  <h2 data-page-node-id="GvTpR8taEGDRlbDqttjJo3"><span class="n" data-page-node-id="7XTBLi6PG2aBGg1XP69rLg">3</span>三个名字逐个拆解</h2>
+
+  <div class="cards" data-page-node-id="i9JYW5VVYjEP7fz1QHYX6A">
+    <div class="card c-r" data-page-node-id="aBHFx3uCYAryqAOKPnet97">
+      <div class="hd" data-page-node-id="eUiLvYY6HhlHi1htEHrPiF">
+        <div class="name" data-page-node-id="oFWh9fXCOkoUR9phAFR9Qh">实验室内参<small data-page-node-id="WeNE7wJM86WMoLZKqtonwQ">面向 B2B / 机构向研究简报</small></div>
+        <div class="score" data-page-node-id="40JGGU1GvQjFFrlbxfdsnL"><div class="pct" data-page-node-id="84tjgEoAqy5TJNbyiGHG4a">15%</div><div class="lbl" data-page-node-id="ceY0eGED42BflwE2ONc2eM">不建议注册</div></div>
+      </div>
+      <div class="bd" data-page-node-id="9BGGKiZCpqYs9qsGBs2GBC">
+        <dl class="kv" data-page-node-id="3tX91JjGJzMQa7EklKSIGr">
+          <dt data-page-node-id="Iz0MojfQaZTLHCZ0YXfCvK">致命伤一</dt>
+          <dd data-page-node-id="skJabqAwp8Fk7eAgp3FAFU"><strong data-page-node-id="zmAGOrRlZxOeEw3nzyUyv9">「内参」的政治含义风险。</strong>已有官方口径：与「内参」同类的党政机关公文用语（清样、摘要）被认定「具有一定政治含义，用作商标易产生不良影响」，依商标法第十条第一款第（八）项驳回；「内参名人堂」中的「内参」被认定易使消费者误认 + 缺乏显著特征。</dd>
+          <dt data-page-node-id="DM64F5mxFLEr7pQKEZoUIb">致命伤二</dt>
+          <dd data-page-node-id="k0iJ8NyAxDx8DpEQWoT2AB"><strong data-page-node-id="ruSKmu7DuX23qzYBtzkSx7">在先商标群密集。</strong>仅第 52358205 号「内参」一案，审查中就引证了<strong data-page-node-id="hkME8xhOuVFpjv0lsDZqTO">九件</strong>在先「内参」系列商标（内参及图、内参大师、天祈内参、品内参知大事……）。说明审查员对「内参」二字高度敏感。</dd>
+          <dt data-page-node-id="roD9MIVITxt9DEd8IXJM7T">致命伤三</dt>
+          <dd data-page-node-id="uEa42iH40XEi7tlpe28KZ8"><strong data-page-node-id="7l4SvC6SDfl6bwA1NFcZLm">出版服务上的描述性。</strong>41 类 4104 组含「期刊出版」「新闻刊物出版」「报纸出版」，而「内参」正是这类出版物的通用体裁名，属第十一条第一款第（二）（三）项。</dd>
+          <dt data-page-node-id="0bLaR8CWm34Irf8rNv1Wt6">叠加效应</dt>
+          <dd data-page-node-id="zJTHLf5206KCTttOm1zQdr">「实验室」+「内参」两个弱显著性/敏感词叠加，即使侥幸通过，也几乎必然被要求<strong data-page-node-id="awDeiImINZfhdSHdfAWQHU">同时放弃「实验室」和「内参」的专用权</strong>——那你拿到的将是一个没有任何实际保护力的空壳。</dd>
+          <dt data-page-node-id="lTVfHRBsddnkMRSgmKlM0E">建议</dt>
+          <dd data-page-node-id="Mp5ZGzplriRkIJYll2vV7x"><span class="tag tag-bad" data-page-node-id="OS7c1B7AjJGB8cG4gN4XF4">改名</span>B2B 栏目名可以照常叫「实验室内参」对外使用（栏目名不等于商标），但<strong data-page-node-id="34nw72C8SG4MlGZE3kAiKz">不要拿它去注册商标</strong>。真正要保护的是你的主品牌和你设计的 logo。</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="card c-a" data-page-node-id="RDt8J45gdTfhKDLM8xoGqf">
+      <div class="hd" data-page-node-id="f14nwH1utulrWQNoXUH7B4">
+        <div class="name" data-page-node-id="GvR4vAG69pqWSrWRULW6eR">实验室前线<small data-page-node-id="rUxZvbzIryH0M2dAKTUHbf">面向公众的现场视频栏目</small></div>
+        <div class="score" data-page-node-id="ItRAVWETnEQWxaYC0xMSMq"><div class="pct" data-page-node-id="XrgkZrThdJbG5VuDduAiT3">35%</div><div class="lbl" data-page-node-id="tMYMXx2Kwm5b9kulrCXUDP">可注，需技术手段</div></div>
+      </div>
+      <div class="bd" data-page-node-id="fNNZ7R25bsq0ACy1edTXhm">
+        <dl class="kv" data-page-node-id="fMRkGFL1yY9DUF43r1sgkd">
+          <dt data-page-node-id="30P0ZKFkqAZmfwXC82xMDf">有利点</dt>
+          <dd data-page-node-id="YUp1VvNEDGPJXCRJxQi7O3">「前线」不是描述性词，它给「实验室」这个通用场所名注入了一个独特含义（一线现场、front line）。整体不再是「一个做实验的地方」，而像一个特定栏目的名字——这正是审查员判断显著性时看的「整体含义」。</dd>
+          <dt data-page-node-id="5W2mGbsv1JDmvmloMtdF3a">不利点</dt>
+          <dd data-page-node-id="HbiQADTNSsXueCg69sCwYe">① 41 类「实验室」驳回先例的压力仍在；② 「前线」是新闻常用词，若你的服务里含「新闻记者服务」「摄影报道」，可能被认为描述性；③ 需检索在先「XX前线」系列商标（此前公开资料显示存在「实验室前沿」这类在先网站名，近似风险要查）。</dd>
+          <dt data-page-node-id="muFzQ6V9PPPMdSmiMt8JlX">破解办法</dt>
+          <dd data-page-node-id="wV0XCRyeotNOpGRwgEgR28"><span class="tag tag-info" data-page-node-id="8ph2lWAyDTOobZt2I8Z6PH">放弃专用权</span>申请时主动声明「实验室」放弃专用权，只主张「实验室前线」整体的保护 —— 这是实务中最常用的过关手段。<br data-page-node-id="K5UN0ur5YXMAG9KOLudpQB"><span class="tag tag-info" data-page-node-id="gcZR3ny2bwJA8XxBggpVf1">图形化</span>以「独创图形 + 文字」组合提交，显著性由图形承担。<br data-page-node-id="SM2CLRTTogB3QEH7diD49N"><span class="tag tag-info" data-page-node-id="ZNUnKOKmMmEGgjTrWqQaTx">使用证据</span>先跑 6 个月内容，攒播放量、粉丝、合作合同，再以「经使用取得显著性」补强。</dd>
+          <dt data-page-node-id="HpRaz7pUXkJH7x3tFD3M9d">建议</dt>
+          <dd data-page-node-id="PSXCbPeXD51Q9cTH2ihNrl"><span class="tag tag-warn" data-page-node-id="xGWRWbSCYSzlHEQVfi3c0e">保留这个名字</span>它是三个里唯一值得投入注册成本的。<strong data-page-node-id="oq36BkWI0MwAEF3O6eOtyA">但不要现在裸提交纯文字</strong>——先做 logo，用组合商标 + 放弃专用权的组合拳。</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="card c-a" data-page-node-id="kSbhCkeBDgmLOcFBGdrtIB">
+      <div class="hd" data-page-node-id="fboItupLBxIgLV93ykOWFw">
+        <div class="name" data-page-node-id="geHTlWH1h1LxODvoA7OdvH">非常实验室<small data-page-node-id="e7969uDapCH0mOACBtOYod">已列为不推荐的备选</small></div>
+        <div class="score" data-page-node-id="55KFmA4B75cxhPv5aMwXEc"><div class="pct" data-page-node-id="NerJxfQ79Yfw5TRtqbFAfn">45%</div><div class="lbl" data-page-node-id="0rmmJ62MgDsuwE1g7rFLoK">商标可行 / 品牌否决</div></div>
+      </div>
+      <div class="bd" data-page-node-id="De588AB26mv4MvDFV5xP7y">
+        <dl class="kv" data-page-node-id="ec4NNOgLjXmfzHE8rKTKKC">
+          <dt data-page-node-id="fE7Mb2EiagB8n1OzLdSxME">商标角度</dt>
+          <dd data-page-node-id="0csYhh4kOqdF6vQ4HS5ZfX">三个里最好过的。「非常」是副词性臆造搭配，不是描述词，整体显著性反而强于另外两个。</dd>
+          <dt data-page-node-id="0HD7N1pqPJjg5vFOu1Zxfd">剩余风险</dt>
+          <dd data-page-node-id="399gAg5hRk9Fh87vsUiCYf">「非常 X」是在先商标的高频结构（非常深科技只是其中之一），近似检索命中率会很高，需要代理机构做详细排查。</dd>
+          <dt data-page-node-id="FhYOYMwICDFp53w8OUottE">品牌否决</dt>
+          <dd data-page-node-id="hs22MBheS4uM92Y1MDiKa6"><span class="tag tag-bad" data-page-node-id="hJGDKrUImwoqDS7yScc2XO">建议放弃</span>你已确认与「非常深科技」切割干净，这个名字会持续唤起那段旧关联——这是品牌层面的包袱，不是法律问题，但代价更高。<strong data-page-node-id="gGjNv8OTkKtnag6vLQq1Xt">商标能注册，不等于这个名字该用。</strong></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-page-node-id="kFcu5QLKNnCOn4G6LgacsA">
+  <h2 data-page-node-id="2XIL9tq7oCzpCRb4tn16HQ"><span class="n" data-page-node-id="1LIhG7aEpNqDooO5Xxgn6P">4</span>破局的三个技术手段</h2>
+  <div class="lead" data-page-node-id="d5Z8GHvCu1olOM3I9lLB9w">你的命名体系有先天缺陷，但缺陷是可以绕开的。按顺序用这三招。</div>
+
+  <div class="act" data-page-node-id="LxKl3tseK8hVqix8udaHzz">
+    <div class="h" data-page-node-id="B49XFrZKnCEMHTDhKONf2W"><span class="ph" data-page-node-id="9O0LPoBvzevrbswUeeHytN">手段一</span>放弃专用权声明（成本为零，效果最直接）</div>
+    <p data-page-node-id="0lUitC1wTkeZgYRajmv42D">商标法允许申请人声明对商标中缺乏显著性的部分<strong data-page-node-id="HEDFlXg9zcQ9e9PAMM0n2A">不主张专用权</strong>。你在申请书里写一句「申请人声明对『实验室』三字放弃专用权」，审查员驳回的主要理由就被提前化解了。</p>
+    <p style="margin-bottom:0" data-page-node-id="ViTq3iq9YxBGyxlW22Ppew"><strong data-page-node-id="OeRUQAocJiG89dP4pgrS3z">代价</strong>：你拿到的商标，不能禁止别人也用「实验室」三个字（本来也不能）。你保护的是「实验室前线」这个<strong data-page-node-id="FL59TZndmCIGg9ZYM3LqzB">整体组合</strong>。对你的实际用途——禁止别人开一个同名栏目——这个保护力完全够用。</p>
+  </div>
+
+  <div class="act" data-page-node-id="z8GpFpDUTpUPnCK2Gykvog">
+    <div class="h" data-page-node-id="KvAFsF06Cf9HUx2ffx71AD"><span class="ph" data-page-node-id="n6OI9jnXgv6uxAAkmTTrOj">手段二</span>图形化组合注册（最有效，也是必做项）</div>
+    <p data-page-node-id="pp0MLKghhG0bhn6Nh4MguS">纯文字商标的显著性只来自文字；<strong data-page-node-id="ILdDEgmesu8klnbw03Mxty">图文组合商标的显著性可以由图形承担</strong>。你的平面设计师正好在这里派上用场。</p>
+    <ul style="margin-bottom:8px" data-page-node-id="jwUMpmpXw7wOcZ5uzJPIew">
+      <li data-page-node-id="fyxJUJKL7IHFr6XtCwCMTp"><strong data-page-node-id="c5J0m6rUUvDaABMjwKO4ar">做组合，不做纯文字</strong>：独创图形 + 中文 + 英文（如 LABFRONT / LAB INSIGHT）三合一提交</li>
+      <li data-page-node-id="nthRKJtHpMXFnUAE4pZtDg"><strong data-page-node-id="22Z0QHkFzB1RzDg7xe4AGe">图形要有设计感</strong>：不是把字排一下，是有一个可独立识别的视觉符号（比如烧瓶与镜头、实验器皿与地平线）</li>
+      <li data-page-node-id="THCkPui6J7J3Mfj0k4X3yG"><strong data-page-node-id="MRbr0ebqTEtFMVjjM3HAEp">顺带的效果</strong>：组合商标与在先纯文字商标构成近似的概率大幅下降，等于同时解决了显著性和近似两个障碍</li>
+    </ul>
+    <p style="margin-bottom:0;color:var(--ink3);font-size:13.5px" data-page-node-id="F7JFE2uHLp7Fiwk3VTrJOm">提示：组合商标的弱点是「图形不能改」。所以 logo 定稿后就不要再动，改动需重新申请。</p>
+  </div>
+
+  <div class="act" data-page-node-id="Psqc2IBFAFPV8rCPXdDJRB">
+    <div class="h" data-page-node-id="Z57Lc9Rjp5uhHg267WEy8v"><span class="ph" data-page-node-id="vGtWTVa6ASwI3PpPOpiMMv">手段三</span>使用证据补强（商标法第十一条第二款）</div>
+    <p data-page-node-id="z3YaFcQyJYSR6WFSCGDCXT">法条原文：缺乏显著性的标志，<strong data-page-node-id="kSlGKT1r0OOT9ZrYzPHvkG">经过使用取得显著特征并便于识别的，可以作为商标注册</strong>。</p>
+    <p style="margin-bottom:0" data-page-node-id="GWBKe4bQAlqHe2umYs238G">这意味着：<strong data-page-node-id="0xBoBpHAIp9ewFWkqIMOBx">先用 6–12 个月，再申请，成功率会明显不同</strong>。能用的证据包括——各平台粉丝数与播放量截图、媒体报道、商业合作合同与发票、栏目固定片头的使用记录、线下活动物料。这段时间你本来就要做内容，成本几乎为零。</p>
+  </div>
+
+  <div class="callout warn" data-page-node-id="YGl0D5r6KnFfd2DUwBJSvf">
+    <div class="ch" data-page-node-id="HQwrApJLmknhoPWhOvRWR1">两条要走的反面提醒</div>
+    <p style="margin-bottom:6px" data-page-node-id="LWArS0tAeDGEzsDOdRptPI">① <strong data-page-node-id="PSTgB7bpuknXviUHUBxL8x">「实验室前线」改动一个字，风险完全不同。</strong>若改成「实验室前沿」，会撞上一个已运营十余年的同领域资讯网站（实验室前沿，2008 年成立，专注实验室资讯），在先使用权益风险反而更高。</p>
+    <p style="margin-bottom:0" data-page-node-id="06kAiCwpDzraedN8zmCPYp">② <strong data-page-node-id="Pi4deg97ElXUlxtA4nK3xH">41 类里的「报纸、期刊、杂志、新闻刊物」四项有审查宽松通道</strong>——含禁用条款或缺乏显著性的名称，只要能提供出版许可证就能注册。但个人拿不到刊号，这条路对你走不通，不用惦记。</p>
+  </div>
+</section>
+
+<section data-page-node-id="YvT1ZB4XLD0oAgkAoPRQg8">
+  <h2 data-page-node-id="b9bDX3thIWJjCPRzE8Rqno"><span class="n" data-page-node-id="YswX2WzS5N8a1V5J0qM1Cv">5</span>「实验室内参」的改名方向</h2>
+  <div class="lead" data-page-node-id="3yIny7C354nthXdhmTeM8Y">栏目对外叫什么，和拿去注册什么商标，是两件事。但既然要改，一次改到位。</div>
+
+  <p data-page-node-id="9fuTYY6GZXN2PlWZvojYrr">B2B 栏目需要一个「机构感、专业感、不给审查员抓手」的名字。硬性要求是：<strong data-page-node-id="8zPvRiDprOGZUePtknymFE">避开一切党政公文用语</strong>（内参、纪要、清样、摘要、通报、简报需谨慎——其中「纪要」「清样」「摘要」都已有明确的驳回先例）。</p>
+
+  <table data-page-node-id="rMLnpFFMCPJt2pJUliymun">
+    <thead data-page-node-id="ee4UG7cSArDz3icXTkAKAz"><tr data-page-node-id="iVEHKwEzEyAUBP0wkVm2Kp"><th style="width:24%" data-page-node-id="wtiRnbSHVuHjf7cT3dbO2R">候选</th><th class="num" style="width:13%" data-page-node-id="1yVECZ63Lzel7rkBsvYMKC">风险</th><th data-page-node-id="OZ0AP0bw59Z6kysYy7MrXd">判断</th></tr></thead>
+    <tbody data-page-node-id="ASgseSy4Z8LyFH1XMuPIIW">
+      <tr data-page-node-id="1BlA8NlIMeQu20iEPDXC3x"><td data-page-node-id="Suh0hjxj8uSNSZcqssbbza"><strong data-page-node-id="wDVacnZuJfT0X1tldp27Nm">实验室观察</strong></td><td class="num" data-page-node-id="W4jksdQEoEg7YtkB9Ybpvs"><span class="mid" data-page-node-id="JTtdtaA9Ye87BCW7MtHEi6">中</span></td><td data-page-node-id="zDoOOOIFnnjICp80uinSrj">机构感足、无政治含义。但「观察」是媒体常用词，41 类可能被认为轻微描述性——<strong data-page-node-id="FxLhIPHRCj2HypNoFPcokN">配合图形 + 放弃专用权，是首选</strong></td></tr>
+      <tr data-page-node-id="CAVGi24jN9sh7zSmnBYIKN"><td data-page-node-id="WRzcJ7ZHSGaOsRfmqNVS7A"><strong data-page-node-id="Bgxq3BNcdnnLCYfxrrBBzV">实验室档案</strong></td><td class="num" data-page-node-id="xOlGAuT9WleFP4xdXBRao6"><span class="ok" data-page-node-id="yf6hEIZDSsLnO29GnjEQwO">低</span></td><td data-page-node-id="QPq9u2lPMzUbIws65f2dbo">「档案」不描述你的服务，体裁感弱，显著性反而更好。语感偏冷静克制，适合机构向内容</td></tr>
+      <tr data-page-node-id="zzmQMcz6dEk2kcrbku7Ebd"><td data-page-node-id="Kf2KNUCGNdmFJE6zv6iLw7"><strong data-page-node-id="DKWqsgxeb718vTK9ezCHJR">Lab Insight</strong>（纯英文/中英组合）</td><td class="num" data-page-node-id="sv2ggldLmd1UpfyUHEgDwg"><span class="ok" data-page-node-id="lJeyVjZ22yfNf34lgnwtEB">低</span></td><td data-page-node-id="8ccYYWXfgkONVhovF26P2d">英文+中文组合提交，显著性由英文承担，中文「实验室」部分放弃专用权。涉外 B2B 场景也更体面</td></tr>
+      <tr data-page-node-id="KcT9CO83b7dpEClqJD5uy6"><td data-page-node-id="SJ3d0gfE1cZmRqfGHBfWIZ"><strong data-page-node-id="DkDFYqRpmcuBndkmSe3yJC">实验室手记</strong></td><td class="num" data-page-node-id="vz8CjFtTCUSCg62B4FVbNO"><span class="ok" data-page-node-id="eIqgCEwLT1pxrvyNNpmYRA">低</span></td><td data-page-node-id="bugTvK80cNqeRoC2VaLSPM"><strong data-page-node-id="uvBYASxFePTFkq4oQuPc56">最推荐</strong>——直接接你《黄师傅十年手记》的脉络，IP 连贯性最强；「手记」是个人化词，不描述服务内容，显著性没问题</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout" data-page-node-id="ILno6DEhZCIidC8tHz9eKZ">
+    <div class="ch" data-page-node-id="mDVnXCnHBmtPXf9UYIU0GO">我的建议</div>
+    <p style="margin-bottom:0" data-page-node-id="3iqBMUZ8IRkDIAd8hRf0o9">B2B 产品线改名<strong data-page-node-id="WSGxrrFfHRAP1yQQn4rZFX">「实验室手记」</strong>。理由有三：一，接住你十年手记已经积累的认知资产；二，「手记」二字天然带出「亲历者在场」的质感，正好是 B2B 客户愿意付费的东西；三，注册风险是四个候选里最低的。<br data-page-node-id="4eWdGaPLbyOFdYxq6uALl6">公众侧保留<strong data-page-node-id="uFlflmfZBiIEcyqiUiXkas">「实验室前线」</strong>，一深一浅、一内一外，正好成对。</p>
+  </div>
+</section>
+
+<section data-page-node-id="ObwSVb2oT183J7tm370eCm">
+  <h2 data-page-node-id="f1hrJxHByySSrjCzS9dBHK"><span class="n" data-page-node-id="N7AZdLOZRodH5yB80hwhlw">6</span>注册动作规划</h2>
+  <div class="lead" data-page-node-id="VGDbTzRSUzrxR0sdoMMr0V">分三批走，把钱花在成功率最高的地方。</div>
+
+  <h3 data-page-node-id="KX2iDQksOZxcGCUdUMUEsL">主体：用杭州个体工商户</h3>
+  <p data-page-node-id="VASUEISfQWzKHiEdCMZAkZ">自然人申请商标<strong data-page-node-id="n0ogcazH1jFLcpPyQqSHat">必须</strong>提供个体工商户营业执照，你的杭州个体户正好符合条件。注册后再以商标使用许可的方式授权给北京文化公司使用——这也延续了你「IP 资产与个人/公司债务隔离」的原有设计。北京公司现在刚有第一笔流水，不是持有 IP 的最佳容器。</p>
+
+  <h3 data-page-node-id="8NGpbQYYvyKL7HpQpFxfbS">类别矩阵</h3>
+  <table data-page-node-id="IqZzT4lL0PYr3c0aSlPGg1">
+    <thead data-page-node-id="i1cQNoK1RGMA2wgxtKXlDA"><tr data-page-node-id="rupeLnrwhzWkDrYdhaIzC2"><th style="width:10%" data-page-node-id="xLZuzgUflVooGbaRQfg9Vb">类别</th><th style="width:26%" data-page-node-id="RaDtMF1fXurpY874uyszMA">覆盖</th><th style="width:12%" data-page-node-id="Cob7bHsSPwgn6Mbv4dRMwl">优先级</th><th data-page-node-id="JCCFgeREzCEVUUbn0UcMvZ">对你的意义</th></tr></thead>
+    <tbody data-page-node-id="XLd2O85P9sFfkCkV0wd27X">
+      <tr data-page-node-id="66ksOFlZHrGEfTp6VE43MG"><td data-page-node-id="S1lGqFM6NyeX78rU7UiRaQ"><strong data-page-node-id="p4Hk2YjNV4RGyKlkq0EYSo">41 类</strong></td><td data-page-node-id="PUAfxKlzyfNxiyGDf4MSnL">教育、培训、娱乐、在线出版、视频节目制作</td><td class="num" data-page-node-id="T6487ecrLFfWPZqvAQKXZR"><span class="tag tag-bad" data-page-node-id="R9n0UDauliAkFcn1yDJEBw">必注</span></td><td data-page-node-id="0kEVxcwC31Dh6EIMPKbDWI">内容主业 + 未来的实验室游学课程。核心战场，也是风险最高的类别</td></tr>
+      <tr data-page-node-id="FkjcotTbOPHNSyoQ2WJ2E5"><td data-page-node-id="o6F5tP8OdDijFcqAi71CYT"><strong data-page-node-id="uuTyVxe94dT9gBFLGcR4F2">35 类</strong></td><td data-page-node-id="XQxMX3GnimkwQF6NfunA6N">广告、市场营销、替他人推销、直播带货</td><td class="num" data-page-node-id="EIvPDNTTKbJ3pUmjiXyL0b"><span class="tag tag-bad" data-page-node-id="5DTlEcCdoeNShAkjqxKO4t">必注</span></td><td data-page-node-id="dqWUD6D5pd1unlvAFN7CcO"><strong data-page-node-id="W13m6zfTFiNB4P0HepnZV5">变现命门</strong>。小店、带货、广告接单全靠它。且「实验室」在 35 类不描述服务场所，风险远低于 41 类</td></tr>
+      <tr data-page-node-id="8EEr1luBvTPBkofmBihn5l"><td data-page-node-id="DN2nWzmt6EHFUuMpjhupzM"><strong data-page-node-id="9z92GBYHmPzvWAgAvDJX1l">39 类</strong></td><td data-page-node-id="lNWIFuMQJDRQjQSizTqmpE">旅行安排、游学组织</td><td class="num" data-page-node-id="8A2oexec73lzbzg2kZG6RA"><span class="tag tag-warn" data-page-node-id="R9rBncDsrmCUy90OFRoNzv">建议注</span></td><td data-page-node-id="30IJcWmfsBiEvHe5PvuQUa">实验室游学是你差异化最强的产品线，别等到做起来再补</td></tr>
+      <tr data-page-node-id="n4B4Ii2XPLyO4aQ7AFN1MR"><td data-page-node-id="tMeHMj454gCkE2BnBHEIWm"><strong data-page-node-id="pq7a9CY5t0yDg7MUNC37N8">42 类</strong></td><td data-page-node-id="z49nPgeE8Tmn78P1Q1Cete">科研服务、软件开发、技术服务</td><td class="num" data-page-node-id="c6XZJNufYTCFhStH0osymq"><span class="tag tag-warn" data-page-node-id="3Vx8JQJGKdYXIn7ZqerrsT">B2B 签单后</span></td><td data-page-node-id="CQR4n4Pe7uPfFWuFmgEfbD">AI 数字员工、建站服务要用。签下动量科技或原科瑞控再补不迟</td></tr>
+      <tr data-page-node-id="AF1Uwl91ihZpVVCqUWBXBw"><td data-page-node-id="UUILQR2XnVakGS4JjCaIif"><strong data-page-node-id="6lj7aPsyY2iLtD3qWUBes7">16 类</strong></td><td data-page-node-id="OCHyxYEcmPaiJTm6i812hj">印刷品、书籍</td><td class="num" data-page-node-id="pgsw9jLVc2mGBamsfuXggT"><span class="tag tag-info" data-page-node-id="LI6UatQIi0TlTuC6DlVcEJ">有余力</span></td><td data-page-node-id="tBLHS6gRPuaQfM1lUJ6319">《十年手记》成书时补</td></tr>
+      <tr data-page-node-id="UwrbCCKWJAP5JbspI29RDV"><td data-page-node-id="Y9l9fptEE4KvfovHauc2wx"><strong data-page-node-id="STpjIu2NtpFcKiPyCnoiqQ">9 类</strong></td><td data-page-node-id="pPFW299mYgZYXt2lm6Bbmu">可下载软件、APP</td><td class="num" data-page-node-id="lpH76EbIKWXcLpafZIAGQv"><span class="tag tag-info" data-page-node-id="KMLCy9mNWmE88g0gpw9CR3">后期</span></td><td data-page-node-id="JAFd7tmse2uiQmTChAEnLz">做小程序或 APP 时补</td></tr>
+    </tbody>
+  </table>
+
+  <h3 data-page-node-id="CdJ55Tip9ndoCjSuWa2tfU">三批次时间线</h3>
+  <div class="timeline" data-page-node-id="mnm8gfndHIsOWI39hGSyCU">
+    <div class="tl-item" data-page-node-id="SpJ2BYgZRyEhmpuHQ1wxMA">
+      <div class="when" data-page-node-id="oDvd8K83r3ImSCiTPTh9l7">第一批 · 即日起两周内</div>
+      <div class="what" data-page-node-id="9GTfXyjhdum08zKxLLGnbG">锁定主品牌与最强显著性资产</div>
+      <div class="desc" data-page-node-id="BhieDg6kY1pwghjcxulc1t">
+        ① 「图灵的金枪鱼」——臆造组合，显著性最强，成功率最高，41 类 + 35 类先拿下<br data-page-node-id="efOle1nKC9LywF6lXtukCB">
+        ② 主品牌图形 logo（图文组合）——41 类 + 35 类<br data-page-node-id="v0WrMUWcLWWHzAHH3zAahw">
+        ③ 「黄师傅」短名——<strong data-page-node-id="DiX1LXPpcR2SVDv1xxb3ed">需先做在先检索</strong>：41 类已有一件「CH FU 黄师傅」在 4101 教育群组获准注册（第 79724390 号），纯文字申请大概率被引证。<strong data-page-node-id="mlU5EYJWhysIzpWybEqWTA">若要用，必须以独创图形组合提交</strong><br data-page-node-id="t8gqD7SczjL0vPRsLVIvoq">
+        <span style="color:var(--ink3)" data-page-node-id="BnNyi8VujIg4C7Jrn90Hg2">预算：约 3–4 件 × 270 元（电子申请官费）+ 代理费 300–600 元/件</span>
+      </div>
+    </div>
+    <div class="tl-item" data-page-node-id="D668VbOdMtDBZ70r7vFWfV">
+      <div class="when" data-page-node-id="KwGEoczX41IYXWKp46dDlc">过渡期 · 未来 3–6 个月</div>
+      <div class="what" data-page-node-id="MK5RWCa7ZH0DDrXiU1bpUC">积累使用证据，同时定稿视觉</div>
+      <div class="desc" data-page-node-id="RdFKq4Dhm2pWkcjLiZVuSj">
+        ① 让平面设计师出「实验室前线」和「实验室手记」两套 logo 方案（这是注册能否成功的关键变量）<br data-page-node-id="eEsBsiqs4I1fAF9RYbcA4I">
+        ② 内容正常更新，按月归档：播放量截图、粉丝数、合作合同、活动物料——这些是日后「经使用取得显著性」的证据<br data-page-node-id="FPErqJG0yV7bOwBooA4pDG">
+        ③ 委托代理机构对选定名称做<strong data-page-node-id="G2DnFo3jscVY3tU90pfWWK">付费专业检索</strong>（300–500 元/件），拿到书面风险报告再提交
+      </div>
+    </div>
+    <div class="tl-item" data-page-node-id="GfLRLreoZFOnkUPANUx01w">
+      <div class="when" data-page-node-id="j7jr9DLaTCZxLLW2DgeadV">第二批 · 满 6 个月后</div>
+      <div class="what" data-page-node-id="XoYJnBB0QWOwqtGLoIi2Rb">提交栏目商标（带使用证据）</div>
+      <div class="desc" data-page-node-id="ADG7LFEtvS3BBu4zH25nwj">
+        ① 「实验室前线」图文组合 · 41 类 + 35 类 · 声明放弃「实验室」专用权<br data-page-node-id="onFjirYUPmfLVAo9xGmNN8">
+        ② 「实验室手记」图文组合 · 41 类 + 35 类 · 同样声明放弃专用权<br data-page-node-id="mAgVh8VE0OuU9qaKmWsejA">
+        ③ 同步补 39 类（游学）<br data-page-node-id="7utiBqygk2evC2BWjqrspq">
+        <span style="color:var(--ink3)" data-page-node-id="1oVOcqrq3K8pli1MDLySb6">此时提交的优势：有 6 个月真实使用记录，可援引商标法第十一条第二款答辩</span>
+      </div>
+    </div>
+    <div class="tl-item" data-page-node-id="ARo12WKWA1gIi3v2tm6uPs">
+      <div class="when" data-page-node-id="fURt3g2hzrb6qzwQnQti3Q">第三批 · B2B 签单后</div>
+      <div class="what" data-page-node-id="WkTB3ALNEnOf5OFtzBmeMs">按需补类</div>
+      <div class="desc" data-page-node-id="NPxEuQcRFEFCHaRERDKOEg">42 类（科研与技术服务）、16 类（书籍）、9 类（软件）。签下动量科技、原科瑞控这类客户后再补，不必提前烧钱。</div>
+    </div>
+  </div>
+
+  <div class="callout warn" data-page-node-id="eSa2DGNth87IHYi1AmftuP">
+    <div class="ch" data-page-node-id="PKPaI3u7soUJgKsKyKYxBK">新商标法衔接提醒（重要）</div>
+    <p data-page-node-id="hPGHMqd34HF77DAaXhlwF8">新修订的《商标法》已于 2026 年 6 月 26 日通过，<strong data-page-node-id="BA97RsFFJpg1zu7H7UQr8l">2027 年 1 月 1 日起施行</strong>，是四十多年来首次全面修订。对你有直接影响的一条：新法明确<strong data-page-node-id="GqyF1uW1IIWW0KHkSXrxjz">「不以使用为目的，且明显超出正常生产经营需要申请商标注册的，不予注册」</strong>，并对恶意申请增加最高十万元罚款。</p>
+    <p style="margin-bottom:0" data-page-node-id="TbgBHHQPTwKDeYltkgIFoe">落到你的动作上：<strong data-page-node-id="GlREOp3fcVl4up1FW3oaoU">不要一次囤几十个类别或多个近似名字</strong>。每一件申请都要对应一个你确实在用的品牌，且保留使用痕迹。你现在的节奏（少量、真实、有内容支撑）正好是安全的。</p>
+  </div>
+</section>
+
+<section data-page-node-id="VBmSy181fNn9lTBu22d1QV">
+  <h2 data-page-node-id="Gr3Te8tFsiAkOYzHO0hAqp"><span class="n" data-page-node-id="Moc5DdNkI7bxZtPkEHChDo">7</span>本周就能做的五件事</h2>
+  <ol data-page-node-id="diVofGhlOIDo3Q1YSA4Uw5">
+    <li data-page-node-id="J2LiiZEcU1C8s5oNaMsMLf"><strong data-page-node-id="BeHAuFDJmxUDjMMvfgqAqi">今天</strong>：进中国商标网近似查询系统（sbj.cnipa.gov.cn → 商标网上检索 → wcjs.sbj.cnipa.gov.cn，需注册登录），把「图灵的金枪鱼」「实验室前线」「实验室手记」三个名字在 41 类、35 类各查一遍，截图留存。<strong data-page-node-id="SCNn3jECBAapYjrwOHnBaJ">注意盲查期 3–6 个月</strong>，今天查不到不代表明天能注。</li>
+    <li data-page-node-id="9sFG6oG96bhfDJVNkdYBF1"><strong data-page-node-id="25lsaOcoKkBtOc6UTen7cm">本周</strong>：找一家商标代理（知果、权大师、阿里云商标等）做<strong data-page-node-id="qC9zj40IqRUnwe6wBwJaFz">付费专业检索 + 风险报告</strong>，重点是「图灵的金枪鱼」和「实验室前线」。这笔三五百元，比你自己省下的钱值。</li>
+    <li data-page-node-id="Ge0Yzfb3G7rq7embcHtzhB"><strong data-page-node-id="DNbFoMq95XRfChVnsgtdfr">本周</strong>：给平面设计师下 brief——要两套 logo 方案（实验室前线、实验室手记），明确要求「可独立识别的图形符号」，因为图形是你绕开显著性障碍的关键。</li>
+    <li data-page-node-id="7LWzwzdoTAEeyyhGldS9Cs"><strong data-page-node-id="3ku2K7pNsvaaaip2x5MYcv">本月</strong>：确定 B2B 栏目改名。我的建议是「实验室内参」→「实验室手记」。<strong data-page-node-id="ZZYP5bzMiehMdNBsd1yglv">栏目对外叫什么，不影响你现在就用新名字</strong>，商标只是保护手段，不是使用前提。</li>
+    <li data-page-node-id="BWZMFEDjH2rU3mroICNMXC"><strong data-page-node-id="qWeqfFXMI8BoPsH5WlT8Hz">持续</strong>：建一个「商标使用证据」文件夹，按月归档播放量、粉丝数、合同、发票、活动物料。半年后第二批申请时，这些是硬通货。</li>
+  </ol>
+</section>
+
+<footer data-page-node-id="awutIeY849gEWxxqwCOVbB">
+  <strong data-page-node-id="AUaBvQptafTjoWjqqPhVYD">关于本评估的边界</strong><br data-page-node-id="7tvctIyDy4vWzY3ijQ5nfq">
+  成功率是基于公开判例、在先商标线索与审查口径的<strong data-page-node-id="Tw5uGfmnkncR32SrHCv7fs">专业估算</strong>，不是官方结论。商标审查存在个案差异与 3–6 个月盲查期，任何人都无法保证百分之百通过。本文件的价值在于帮你识别系统性风险、调整命名与提交策略，最终以代理机构的正式检索报告为准。<br data-page-node-id="2VWZ8zpQkfiJTims8RQ7il"><br data-page-node-id="dfWvX6NTPpg5dB7KkM3ry4">
+  判例来源：国家知识产权局商标驳回复审决定书（第 41866818 号「[AR]T LAB」、第 62240545 号「MYLAB+」、第 52358205 号「内参」等）、中国商标网公开数据、《商标审查审理指南（2021）》、《中华人民共和国商标法》（2019 年修正及 2026 年修订版）。
+</footer>
+
+</div>
+</body>
+</html>
