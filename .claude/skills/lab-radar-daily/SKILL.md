@@ -51,5 +51,6 @@ description: 生成「实验室雷达 · Claude 云端早报」——每日追�
 ## 四、存盘与推送
 
 1. 写入 `assets/files/10_Claude云端日报/YYYY-MM-DD-早报.md`（日期按北京时间）。
-2. `git add` → `git commit -m "daily: 实验室雷达 Claude 云端早报 YYYY-MM-DD"` → `git push -u origin <当前工作分支>`，网络失败按 2s/4s/8s/16s 重试。
-3. 最后在会话中回复：核心结论 3 行 + 主编推荐 + 文件路径。
+2. 生成 Word：`node scripts/md2docx.js assets/files/10_Claude云端日报/YYYY-MM-DD-早报.md`（输出到 `assets/files/word/`，用户 Mac 上的同步脚本会自动拷到桌面「实验室雷达」文件夹）。
+3. `git add` → `git commit -m "daily: 实验室雷达 Claude 云端早报 YYYY-MM-DD"` → `git push -u origin <当前工作分支>`，网络失败按 2s/4s/8s/16s 重试。
+4. 最后在会话中回复：核心结论 3 行 + 主编推荐 + 文件路径。
